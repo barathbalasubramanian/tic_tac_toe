@@ -1,0 +1,100 @@
+
+* {
+    margin: 0%;
+}
+
+body {
+    background-color: #202020;
+    font-family: cursive;
+}
+
+hr {
+    width: 55%;
+}
+
+#container {
+    margin-top: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    justify-content: center;
+    align-items: center;
+    color: deepskyblue;
+}
+
+#player {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 28rem; 
+}
+
+#box {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: deepskyblue;
+    margin-top: 30px;
+}
+
+.tile {
+    width: 96px;
+    height: 96px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #202020;
+    cursor: pointer;
+}
+
+.clicked-X {
+    color: crimson;
+}
+
+.clicked-O {
+    color: green;
+}
+
+.x_win {
+    color: crimson;
+}
+
+.o_win {
+    color: green;
+}
+
+#button {
+    width: 28%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    background-color: #202020;
+    font-family: cursive;
+    color: deepskyblue;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+@media only screen and (max-width:400px){
+
+    #container {
+        row-gap: 30px;
+    }
+
+    #player {
+        width: 18rem; 
+    }
+
+    #button {
+        width: 72%;
+    }
+}
+
