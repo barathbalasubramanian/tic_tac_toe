@@ -91,7 +91,7 @@ function checking(playercount,count) {
                         return
                     }
                 }
-                if (irukku == 2 && count == 10 && finished == null) {
+                if (irukku == 2 && count == 10 && finished == '') {
                     console.log('DRAW')
                     draw()
                     return
