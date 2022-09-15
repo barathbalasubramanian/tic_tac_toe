@@ -1,7 +1,7 @@
 
 var text = ''
 var count = 1
-var irukku = 0
+var occurs = 0
 
 var xCount = []
 var yCount = []
@@ -76,29 +76,29 @@ function checking(playercount,count) {
 
             if ( found == true ) 
             {
-                irukku += 1
-                if ( irukku > 2 ) {
+                occurs += 1
+                console.log(finished)
+                if ( occurs > 2 ) {
                     if (count % 2 == 0) {
-                        console.log('X')
                         finished = true
                         X_won()
                         return
                     }
                     if (count % 2 != 0) {
-                        console.log('O')
                         finished = true
                         O_won()
                         return
                     }
                 }
-                if (irukku == 2 && count == 10 && finished == '') {
-                    console.log('DRAW')
+
+                if ( count == 10 && finished == null ) {
+                    console.log(finished)
                     draw()
                     return
                 }
             }
             else {
-                irukku = 0
+                occurs = 0
                 break
             }
             
@@ -139,7 +139,7 @@ document.getElementById('btn').addEventListener('click', function() {
         document.getElementById(i).classList.remove('clicked-O') 
         
         count = 1
-        irukku = 0
+        occurs = 0
         xCount = []
         yCount = []
         finished = null
@@ -172,7 +172,7 @@ document.getElementById('reset').addEventListener('click', function() {
         document.getElementById('o').innerText = "PLAYER 'O' :"
 
         count = 1
-        irukku = 0
+        occurs = 0
         xCount = []
         yCount = []
         finished = null
