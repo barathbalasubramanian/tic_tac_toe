@@ -1,4 +1,5 @@
 
+
 var text = ''
 var count = 1
 var occurs = 0
@@ -70,14 +71,14 @@ function clicked() {
 function checking(playercount,count) {
 
     for ( let i = 0 ; i < possibilities.length ; i++ ) {
+        occurs = 0
         for ( let j = 0 ; j < possibilities[i].length ; j++) {
 
             let found = playercount.includes(possibilities[i][j].toString())
 
-            if ( found == true ) 
-            {
+            if ( found == true ) {
                 occurs += 1
-                console.log(finished)
+
                 if ( occurs > 2 ) {
                     if (count % 2 == 0) {
                         finished = true
@@ -90,12 +91,6 @@ function checking(playercount,count) {
                         return
                     }
                 }
-
-                if ( count == 10 && finished == null ) {
-                    console.log(finished)
-                    draw()
-                    return
-                }
             }
             else {
                 occurs = 0
@@ -103,6 +98,12 @@ function checking(playercount,count) {
             }
             
         }
+    }
+
+    if ( count == 10 && finished == null ) {
+        console.log(finished)
+        draw()
+        return
     }
 }
 
